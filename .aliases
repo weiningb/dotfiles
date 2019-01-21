@@ -7,7 +7,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ?='man'
-alias ls='ls -A'
+alias ls='ls -GA'
 
 
 # ---------------------------------

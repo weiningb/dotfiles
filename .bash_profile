@@ -7,7 +7,10 @@ source ${PATH_TO_DOTS}.aliases
 source /usr/local/git/contrib/completion/git-completion.bash
 source /usr/local/git/contrib/completion/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='[\u \w$(__git_ps1)]\$ '
+export PS1='[\[\033[38;5;14m\]\u\[$(tput sgr0)\] \[\033[38;5;219m\]\w\[$(tput sgr0)\]\[\033[38;5;75m\]$(__git_ps1)\[$(tput sgr0)\]]\$ '
+ 
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
 
 # This should be the last line of the file
 # For local changes
