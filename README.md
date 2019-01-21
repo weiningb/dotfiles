@@ -1,4 +1,4 @@
-# ajmalsiddiqui's dotfiles
+# From ajmalsiddiqui's dotfiles
 
 Top secret text files that make my world a better place. :')
 

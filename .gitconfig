@@ -11,10 +11,10 @@
 	co = checkout
 	
 	pom = push origin master
-	
-[url "https://github.com/"]
-	insteadOf = gh:
 
 [user]
-	email = ajmalsiddiqui21@gmail.com
-	name = Mohammed Ajmal Siddiqui
+	email = herecomeswaynebao0811@gmail.com
+	name = Wayne Bit
+
+[core]
+    excludesfile = /Users/wbit/.gitignore_global
