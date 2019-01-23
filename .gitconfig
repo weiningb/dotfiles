@@ -1,15 +1,19 @@
 [alias]
-	i = init
-	s = status
-	p = push
+	st = status
 	a = add
-	c = commit -am
 	b = branch
-
-	ra = remote add
-	po = push origin
-	co = checkout
 	
+	r = remote
+	ra = remote add
+	
+	ca = commit -am
+	ct = commit -m
+
+	ck = checkout
+	ckb = checkout -b
+	
+	p = push
+	po = push origin
 	pom = push origin master
 
 [user]
