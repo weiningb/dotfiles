@@ -2,6 +2,7 @@
 	st = status
 	a = add
 	b = branch
+	d = diff
 	
 	r = remote
 	ra = remote add
