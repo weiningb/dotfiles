@@ -1,7 +1,7 @@
 # Source this first since it contains the locations of directories needed by functions
 export PATH_TO_DOTS="$HOME/projects/dotfiles/"
 source ${PATH_TO_DOTS}.exports
-# source ${PATH_TO_DOTS}.functions
+source ${PATH_TO_DOTS}.functions
 source ${PATH_TO_DOTS}.aliases
 
 source /usr/local/git/contrib/completion/git-completion.bash
