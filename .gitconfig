@@ -1,5 +1,5 @@
 [alias]
-	st = status
+	st = status -s
 	a = add
 	b = branch
 	d = diff
