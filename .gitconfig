@@ -1,43 +1,53 @@
 [alias]
-	st = status -s
-	a = add
-	b = branch
-	d = diff
-	
-	r = remote
-	ra = remote add
-	
-	ca = commit -am
-	ct = commit -m
+    # List aliases
+    la = "!git config -l | grep alias | cut -c 7-"
 
-	ck = checkout
-	ckb = checkout -b
-	
-	p = push
-	po = push origin
-	pom = push origin master
+    l = log --decorate --oneline --graph
+    # Nice, colorful graph visualization
+    lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
+
+    st = status -s
+    a = add
+    d = diff
+
+    b = branch
+    # list branches sorted by last modified
+    br = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+    r = remote
+    ra = remote add
+
+    ca = commit -am
+    cm = commit -m
+
+    ck = checkout
+    ckb = checkout -b
+
+    p = push
+    po = push origin
+    pom = push origin master
 
 [user]
-	email = herecomeswaynebao0811@gmail.com
-	name = Wayne Bit
+    email = herecomeswaynebao0811@gmail.com
+    name = Wayne Bit
 
 [core]
     excludesfile = /Users/wbit/.gitignore_global
 
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+    branch = auto
+    diff = auto
+    status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
