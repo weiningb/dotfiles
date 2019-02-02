@@ -2,7 +2,7 @@
 # Common aliases
 # ---------------------------------
 
-alias home='cd ~'
+alias ~='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -34,11 +34,8 @@ alias nip='npm install --only=prod'
 # Python virtual env aliases
 # ---------------------------------
 
-# Create a virtualenv with python3 as the interpreter
-# I usually name my virtualenv .venv
-alias venv='virtualenv -p /usr/local/bin/python3 .venv'
-alias vac='source .venv/bin/activate'
-
+alias venv='virtualenv'
+alias deact='deactivate'
 
 # This should be the last line of the file
 # For local changes

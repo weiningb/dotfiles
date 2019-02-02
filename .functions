@@ -4,19 +4,24 @@
 # [ -f ".functions.$( uname )" ] && source ".functions.$( uname )"
 
 # Create a new directory and cd to it
+# If the directory already exists, just cd to it
 new () {
-	if [ $# -ne 1 ] ; then
+	if [ $# -ne 1 ]; then
 		echo "Usage: new <directory to create and cd to>"
 	fi
-	mkdir -p $1 && cd $1
+	if [ ! -d $1 ]; then
+		mkdir -p $1
+	fi
+	cd $1
 	echo "In $1"
 }
 
 # I use playgrounds to experiment with new languages and features
 # without making a full fledged project
 # This creates a new playground with the name given as a command line arg
+# If the folder already exists, cd into it
 play () {
-	if [ $# -lt 1 ] ; then
+	if [ $# -ne 1 ]; then
 		cd "$PATH_TO_PLAYGROUND" && echo 'In playground'
 		return
 	fi
@@ -24,14 +29,24 @@ play () {
 	new "$PATH_TO_PLAYGROUND/$1"
 }
 
-# Create a new project and cd into it, does NOT check if project already exists
+# Create a new project and cd into it, if already exist, cd into it
 proj () {
-    if [ $# -lt 1 ] ; then
+    if [ $# -ne 1 ]; then
         cd "$PATH_TO_PROJECTS" && echo 'In projects'
         return
     fi
 
     new "$PATH_TO_PROJECTS/$1"
+}
+
+# virtualenv activate
+vact () {
+	if [ $# -ne 1 ] || [ ! -d $1 ]; then
+		echo "There is no virtualenv $1 setup"
+		return
+	fi
+
+	source $1/bin/activate
 }
 
 # This should be the last line of the file
