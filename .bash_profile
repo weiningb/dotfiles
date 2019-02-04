@@ -12,6 +12,11 @@ export PS1='[\[\033[38;5;14m\]\u\[$(tput sgr0)\] \[\033[38;5;219m\]\w\[$(tput sg
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
+# Setup the pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+	eval "$(pyenv init -)"
+fi
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
