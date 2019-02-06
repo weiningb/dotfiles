@@ -37,6 +37,13 @@ alias nip='npm install --only=prod'
 alias venv='virtualenv'
 alias deact='deactivate'
 
+# ---------------------------------
+# Docker aliases
+# ---------------------------------
+alias dk='docker'
+alias dc='docker container'
+alias di='docker image'
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
