@@ -26,6 +26,9 @@
     p = push
     po = push origin
     pom = push origin master
+    
+    pl = pull
+    pu = pull upstream
 
 [user]
     email = herecomeswaynebao0811@gmail.com
