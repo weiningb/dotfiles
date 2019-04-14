@@ -1,8 +1,5 @@
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH_TO_PLAYGROUND="$HOME/playground"
 export PATH_TO_PROJECTS="$HOME/projects"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 # export TEXT_EDITOR="Visual Studio Code"
 
 # This should be the last line of the file
