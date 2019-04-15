@@ -17,6 +17,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv init -)"
 fi
 
+# Setup Bash autocomplete
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
