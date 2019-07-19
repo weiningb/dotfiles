@@ -29,9 +29,7 @@
     
     pl = pull
     pu = pull upstream
-
-[url "bbgithub:"]
-    insteadOf = https://bbgithub.dev.bloomberg.com
+    pum = pull upstream master
 
 [color]
     branch = auto
@@ -50,8 +48,9 @@
     added = yellow
     changed = green
     untracked = cyan
-[user]
-	email = wbao9@bloomberg.net
-	name = wbao9
+
 [core]
 	autocrlf = input
+
+[include]
+    path = .gitconfig.local
