@@ -10,6 +10,13 @@ alias ?='man'
 alias ls='ls -GA'
 alias ll='ls -GAl'
 
+# ---------------------------------
+# ssh
+# ---------------------------------
+
+alias sshdev="ssh -tt v5dev inline"
+alias sshprod="ssh -tt v5prod inline"
+
 
 # ---------------------------------
 # Git specific aliases

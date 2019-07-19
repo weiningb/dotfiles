@@ -4,8 +4,6 @@ source ${PATH_TO_DOTS}.exports
 source ${PATH_TO_DOTS}.functions
 source ${PATH_TO_DOTS}.aliases
 
-source /usr/local/git/contrib/completion/git-completion.bash
-source /usr/local/git/contrib/completion/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='[\[\033[38;5;14m\]\u\[$(tput sgr0)\] \[\033[38;5;219m\]\w\[$(tput sgr0)\]\[\033[38;5;75m\]$(__git_ps1)\[$(tput sgr0)\]]\$ '
  
@@ -16,6 +14,9 @@ export GREP_OPTIONS='--color=auto'
 if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv init -)"
 fi
+
+# Set vim mode in bash
+set -o vi
 
 # Setup Bash autocomplete
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
