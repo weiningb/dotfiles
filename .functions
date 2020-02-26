@@ -49,6 +49,17 @@ vact () {
 	source $1/bin/activate
 }
 
+# Delete the local and origin branch after a PR is merged
+delb () {
+    if [ $# -ne 1 ]; then
+	echo 'You have to provide a branch name'
+	return
+    fi
+    
+    git branch -D $1
+    git push origin :$1
+}
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
