@@ -1,16 +1,9 @@
 # Source this first since it contains the locations of directories needed by functions
 export PATH_TO_DOTS="$HOME/projects/dotfiles/"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 source ${PATH_TO_DOTS}.exports
 source ${PATH_TO_DOTS}.functions
 source ${PATH_TO_DOTS}.aliases
-
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='[\[\033[38;5;14m\]\u\[$(tput sgr0)\] \[\033[38;5;219m\]\w\[$(tput sgr0)\]\[\033[38;5;75m\]$(__git_ps1)\[$(tput sgr0)\]]\$ '
-
-export STELLA_URL=https://stella.dev.bloomberg.com
- 
-# Tell grep to highlight matches
-export GREP_OPTIONS='--color=auto'
 
 # Setup the pyenv
 if command -v pyenv 1>/dev/null 2>&1; then

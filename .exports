@@ -1,10 +1,12 @@
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='[\[\033[38;5;14m\]\u\[$(tput sgr0)\] \[\033[38;5;219m\]\w\[$(tput sgr0)\]\[\033[38;5;75m\]$(__git_ps1)\[$(tput sgr0)\]]\$ '
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
 export PATH_TO_PLAYGROUND="$HOME/playground"
 export PATH_TO_PROJECTS="$HOME/projects"
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-# export TEXT_EDITOR="Visual Studio Code"
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include"
-export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig"
+export TEXT_EDITOR="Visual Studio Code"
 
 # This should be the last line of the file
 # For local changes

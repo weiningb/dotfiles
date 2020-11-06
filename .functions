@@ -1,7 +1,3 @@
-# This line imports an OS specific functions file if one exists
-# Not been tested on any OS other than Mac OSX
-# TODO: find a better way than uname to distinguish between linux distros
-# [ -f ".functions.$( uname )" ] && source ".functions.$( uname )"
 
 # Create a new directory and cd to it
 # If the directory already exists, just cd to it
@@ -41,12 +37,12 @@ proj () {
 
 # virtualenv activate
 vact () {
-	if [ $# -ne 1 ] || [ ! -d $1 ]; then
-		echo "There is no virtualenv $1 setup"
-		return
-	fi
+    if [ $# -ne 1 ] || [ ! -d $1 ]; then
+        echo "There is no virtualenv $1 setup"
+        return
+    fi
 
-	source $1/bin/activate
+    source $1/bin/activate
 }
 
 # Delete the local and origin branch after a PR is merged
@@ -59,6 +55,11 @@ delb () {
     git branch -D $1
     git push origin :$1
 }
+
+# This line imports an OS specific functions file if one exists
+# Not been tested on any OS other than Mac OSX
+# TODO: find a better way than uname to distinguish between linux distros
+[ -f ".functions.$( uname )" ] && source ".functions.$( uname )"
 
 # This should be the last line of the file
 # For local changes
