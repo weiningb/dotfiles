@@ -12,3 +12,6 @@ defaults write com.apply.screencapture location $SCREENSHOT_FOLDER
 
 # Show hidden files by default in the Finder
 defaults write com.apple.finder AppleShowAllFiles -bool TRUE
+
+# Show complete path on Finder title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;killall Finder
