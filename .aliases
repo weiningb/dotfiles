@@ -27,8 +27,7 @@ alias nip='npm install --only=prod'
 # ---------------------------------
 # Python virtual env aliases
 # ---------------------------------
-alias venv='virtualenv'
-alias deact='deactivate'
+alias act='pipenv shell'
 
 # ---------------------------------
 # Docker aliases

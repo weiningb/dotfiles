@@ -35,16 +35,6 @@ proj () {
     new "$PATH_TO_PROJECTS/$1"
 }
 
-# virtualenv activate
-vact () {
-    if [ $# -ne 1 ] || [ ! -d $1 ]; then
-        echo "There is no virtualenv $1 setup"
-        return
-    fi
-
-    source $1/bin/activate
-}
-
 # Delete the local and origin branch after a PR is merged
 delb () {
     if [ $# -ne 1 ]; then
