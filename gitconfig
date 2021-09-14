@@ -1,0 +1,33 @@
+[user]
+    email = 10580868+weiningb@users.noreply.github.com
+    name = Wayne Bao
+
+[credential "https://github.com"]
+    username = weiningb
+
+[credential]
+    helper = store
+
+[alias]
+    l = log --decorate --oneline --graph
+    s = status -s
+    a = add
+    d = diff
+    b = branch
+    r = remote
+
+    ck = checkout
+    ckb = checkout -b
+
+    cm = commit -m
+    ca = commit -am
+
+    p = push
+    po = push origin
+
+    pl = pull
+    plo = pull origin
+    plu = pull upstream
+
+[include]
+    path = .gitconfig.local

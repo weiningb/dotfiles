@@ -1,0 +1,12 @@
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~', '~/.oh-my-zsh/custom']
+
+- link:
+    ~/.gitconfig: 
+    ~/.zshrc:
+    ~/.oh-my-zsh/custom/aliases.zsh: aliases
+    ~/.oh-my-zsh/custom/exports.zsh: exports
+    ~/.oh-my-zsh/custom/functions.zsh: functions
