@@ -4,6 +4,15 @@
 alias l='ls -lFh'
 alias la='ls -lAFh'
 
+# ---------------------------------
+# Python aliases
+# ---------------------------------
+alias pyv='pyenv virtualenv'
+alias pyvl='pyenv virtualenvs'
+alias pyvact='pyenv activate'
+alias pyvdact='pyenv deactivate'
+alias pyvdel='pyenv uninstall'
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this

@@ -1,9 +1,6 @@
+export ZSH="$HOME/.oh-my-zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Get the local exports first, for example local oh-my-zsh path
-# Path to your oh-my-zsh installation.
-[ -f ".zshrc.local" ] && source ".zshrc.local"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # settings for pyenv
-export PYENV_SHELL=zsh
-source '/usr/local/Cellar/pyenv/2.0.7/libexec/../completions/pyenv.zsh'
-command pyenv rehash 2>/dev/null
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# settings for pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
