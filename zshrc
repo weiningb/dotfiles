@@ -105,6 +105,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# settings for brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # settings for pyenv
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
