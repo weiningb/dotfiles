@@ -1,3 +1,4 @@
+export BAT_THEME="Coldark-Dark"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # This should be the last line of the file
